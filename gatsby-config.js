@@ -5,8 +5,8 @@ module.exports = {
     author: `Wai Min`,
     siteUrl: `https://github.com/wangonya/flexible-gatsby`,
     social: {
-      // twitter: `wang0nya`,
-      // facebook: ``,
+      twitter: ``,
+      facebook: ``,
       github: `waimin314`,
       linkedin: `wai-min-b40921112`,
       email: ``,
