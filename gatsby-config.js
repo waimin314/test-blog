@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Flexible Gatsby`,
-    description: `I am a web developer focusing on front-end development. Always hungry to keep learning.`,
+    title: `Wai Min's Blog`,
+    description: `I am a Software Engineer learning front-end development. This website serves as my portfolio as well as my personal blog`,
     author: `Wai Min`,
-    siteUrl: `https://github.com/wangonya/flexible-gatsby`,
+    siteUrl: `https://waimin.me`,
     social: {
       twitter: ``,
       facebook: ``,
@@ -59,7 +59,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `./static/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `./static/myAvatar.png`, // This path is relative to the root of the site.
       },
     },
     // `gatsby-plugin-offline`,
