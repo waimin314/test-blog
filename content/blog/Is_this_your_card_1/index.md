@@ -9,17 +9,17 @@ tags: [React, Is this your card] # add tag
 
 ### Overview
 
-As part of my learning React journey, I plan to create a card guessing that blew my mind when I was young. I will start with just plain React (Vanilla react as some would call it), and make use of advanced libraries/features as I go. For example, I will not be using Redux or React hooks in the beginning, but I will use it when the state management gets too complicated. The reason for doing that is to learn React from the ground up. Sure I could start using Redux staright from the beginning, but I would like to have a good understanding of how React state works. I belive I need to know the underlying architecture in order to become proficient in a language.
+As part of my learning React journey, I plan to create a card guessing that blew my mind when I was young. I will start with just plain React (Vanilla react as some would call it), and make use of advanced libraries/features as I go. For example, I will not be using Redux or React hooks in the beginning but I will use it when the state management gets too complicated. The reason for doing that is to learn React from the ground up. Sure I could start using Redux staright from the beginning but I would like to have a good understanding of how React state works. I believe I need to know the underlying architecture in order to become proficient in a language.
 
 ### Skill Requirement
 
-Basic React knowlege: You should have done your study on React before creating this project. I will not be covering the basics of React.
+Basic React knowledge: You should have done your study on React before creating this project. I will not be covering the basics of React.
 
 ### Concept
 
-This idea is based on the card trick called "Twenty-One Card Trick", which uses 21 cards. Numberphile has a great explanation for the trick in their [channel](https://www.youtube.com/watch?v=d7dg7gVDWyg 'Numberphile 21 card trick explanation'). We will be using 27 cards, but the basic concept will be the same.
+This idea is based on the card trick called "Twenty-One Card Trick", which uses 21 cards. Numberphile has a great explanation for the trick in their [channel](https://www.youtube.com/watch?v=d7dg7gVDWyg 'Numberphile 21 card trick explanation'). We will be using 27 cards but the basic concept is the same.
 
-Firstly, We will have 9 rows x 3 columns of unique cards as shown below.
+Firstly, we will have 9 rows x 3 columns of unique cards as shown below.
 
 ![grid of cards](./page1.png 'Grid of cards')
 
