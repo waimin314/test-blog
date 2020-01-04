@@ -5,6 +5,17 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
+  // img {
+  //   childImageSharp {
+  //     fluid(maxWidth: 3720) {
+  //       aspectRatio
+  //       base64
+  //       sizes
+  //       src
+  //       srcSet
+  //     }
+  //   }
+  // }
   return graphql(
     `
       {
@@ -19,17 +30,6 @@ exports.createPages = ({ graphql, actions }) => {
               }
               frontmatter {
                 title
-                img {
-                  childImageSharp {
-                    fluid(maxWidth: 3720) {
-                      aspectRatio
-                      base64
-                      sizes
-                      src
-                      srcSet
-                    }
-                  }
-                }
               }
             }
           }
@@ -66,7 +66,7 @@ exports.createPages = ({ graphql, actions }) => {
     Array.from({ length: numPages }).forEach((_, i) => {
       createPage({
         path: i === 0 ? `/` : `/${i + 1}`,
-        component: path.resolve("./src/templates/blog-list.js"),
+        component: path.resolve('./src/templates/blog-list.js'),
         context: {
           limit: postsPerPage,
           skip: i * postsPerPage,
