@@ -125,14 +125,9 @@ Remove the previously used placeholder number **27** and retrieve the given numb
 _In Card.jsx_
 
 ```js
-// prettier-ignore
-// reason
-// <h1> too long to be responsive
 return (
   <div style={cardStyle}>
-    <h1 style={numStyle}>
-      {props.number}
-    </h1>
+    <h1 style={numStyle}>{props.number}</h1>
   </div>
 )
 ```
