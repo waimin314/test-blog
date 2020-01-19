@@ -113,21 +113,26 @@ Now we can use the styles in our \<div> and \<h1>.
 Looks better now :)
 ![Styled Card](./styled_card.png)
 
-Currenly we can only get the card with number 27. For our card game we need 27 different numbers (1 to 27). We are going to make use of _props_ to achive this goal.
+Currently we can only get the card with number 27. For our card game we need 27 different numbers (1 to 27). We are going to make use of _props_ to achive this goal.
 In our **Card.jsx** component, accept **props** as parameter.
 
 ```js
 export default function Card(props)
 ```
 
-Remove the previously used placehold number **27** and retrieve the given number by using **{props.number}** in the **h1** tag inside **Card.jsx**. We need to use curly braces **{}** whenever we want to use objects inside the html elements.
+Remove the previously used placeholder number **27** and retrieve the given number by using **{props.number}** in the **h1** tag inside **Card.jsx**. We need to use curly braces **{}** whenever we want to use objects inside the html elements.
 
 _In Card.jsx_
 
 ```js
+// prettier-ignore
+// reason
+// <h1> too long to be responsive
 return (
   <div style={cardStyle}>
-    <h1 style={numStyle}>{props.number}</h1>
+    <h1 style={numStyle}>
+      {props.number}
+    </h1>
   </div>
 )
 ```
