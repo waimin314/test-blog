@@ -155,7 +155,7 @@ We need to set the **display** type to **flex** and use **wrap** for **flex-wrap
 
 With the above changes, we get flexible layout that wraps the **Card** components when the screen size changes.
 
-![Flex Wrap](https://github.com/waimin314/test-blog/tree/master/content/blog/Is_this_your_card_3/screen_rec_flex_wrap.gif)
+![Flex Wrap](https://raw.githubusercontent.com/waimin314/test-blog/master/content/blog/Is_this_your_card_3/screen_rec_flex_wrap.gif)
 
 It's better, but still not what we want. The cards try to fit it as much as column it can fit depending on the width. We want only 3 columns. From the video, we can see the optimal width for 3 columns is at about 240px. Fixing the width of **grid-container** to 240px should do the trick. It might cause some issue on smaller screens, but it should do for now.
 
