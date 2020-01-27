@@ -9,7 +9,7 @@ tags: [React, Is this your card]
 
 Today we will be creating a 9x3 grid of cards from the **Card** component we created in [part 2](./../Is_this_your_card_2).
 
-We will need to store are numbers 1 to 27. So we need to make use of the famous **State** of React. In order to use **State** the our **App.js** must be class component. Unfortunately, due to my lack of foresight I created our **App.js** component as functional component. Not to worry, it's easy as pie to convert functional component to class component and vice versa.
+We will need to store the numbers 1 to 27. So we need to make use of the famous **State** of **React**. In order to use **State** the our **App.js** must be a class component. Unfortunately, due to my lack of foresight I created our **App.js** component as functional component. Not to worry, it's easy as pie to convert functional component to class component and vice versa.
 
 ###Step 1 of 3
 
@@ -97,9 +97,9 @@ state = {
 }
 ```
 
-Instead of adding 27 lines of \<Card> in **render()** we will make use of an ES6's higher order function, **map()**. We will remap the numbers from **state.numbers** into \<Card>.
+Instead of adding 27 lines of \<Card> in **render()** we will make use of an ES6's higher order function called **map()**. We will remap the numbers from **state.numbers** into \<Card>.
 
-**map** takes in a callback function in which we need to return an object; \<Card> in our case.
+**map** takes in a callback function from which we need to return an object. In our case, \<Card> will be the return object.
 
 let's write a **renderGrid** function that returns the remapped components.
 
@@ -119,7 +119,7 @@ num => {
 }
 ```
 
-**num** is the current value from the array. For example, if it is the first iteration, the value of **num** would be **1**. If second iteration, **num** would be **2** and so on. So we just plug **num** into our **Card**'s **number** props and we get **27** components of **Card** without having to write messy 27 lines of code :). One good practice when using **map** is to assign a unique number to the **key** prop of the returning component so that **react** will easily know which items are being delete/added. Instead of using just **num** as parameter for our callback function, we will use another parameter called **index** or as we well all preferred to write, **i**. Our callback function will now look like this
+**num** holds the current value from the array. For example, if it is the first iteration, the value of **num** would be **1**. If second iteration, **num** would be **2** and so on. So we just plug **num** into our **Card**'s **number** props and we get **27** components of **Card** without having to write messy 27 lines of code :). One good practice when using **map** is to assign a unique number to the **key** prop of the returning component so that **React** will easily know which items are being delete/added. Instead of using just **num** as parameter for our callback function, we will use another parameter called **index** or as we all preferred to write, **i**. Our callback function will now look like this
 
 ```js
 ;(num, i) => {
@@ -129,13 +129,13 @@ num => {
 
 ![Vertical Grid](./vetical_grid.png)
 
-This is not quite what we wanted. it's a 27x1 grid. We want a 9x3 grid. And it's not centered :o. Let's use **CSS** to fix it. Go to **App.css** and delete everything inside it. Add a **className** called container to our main \<div> that wraps around the **renderGrid()** function.
+This is not quite what we wanted. it's a 27x1 grid. We want a 9x3 grid. And it's not centered :o. Let's use **CSS** to fix it. Go to **App.css** and delete everything inside it. We will start from scratch. Add a **className** called container to our main \<div> that wraps around the **renderGrid()** function.
 
 ```js
 <div className="grid-container">
 ```
 
-Write some styling for **grid-container** in **App.css**. Let's add a background for a start. You may choose any color you like.
+Then write some styling for **grid-container** in **App.css**. Let's add a background for a start. You may choose any color you like.
 
 ```css
 .grid-container {
@@ -143,7 +143,7 @@ Write some styling for **grid-container** in **App.css**. Let's add a background
 }
 ```
 
-We need to set the **display** type to **flex** and use **wrap** for **flex-wrap**.
+We need to set the **display** type to **flex** and use **wrap** for **flex-wrap**. With **flex-wrap** set to **wrap**, the child components will automatically move to accommodate screen sizes.
 
 ```css
 .grid-container {
@@ -153,7 +153,7 @@ We need to set the **display** type to **flex** and use **wrap** for **flex-wrap
 }
 ```
 
-With the above changes, we get flexible layout that wraps the **Card** components when the screen size changes.
+With the above changes, we get a flexible layout that wraps the **Card** components when the screen size changes.
 
 ![Flex Wrap](https://raw.githubusercontent.com/waimin314/test-blog/master/content/blog/Is_this_your_card_3/screen_rec_flex_wrap.gif)
 
