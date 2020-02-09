@@ -1,5 +1,9 @@
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
+  .tags-wrapper {
+    max-width: 90%;
+    margin: auto;
+  }
   .post {
     width: 48%;
     max-width: 100%;
@@ -38,6 +42,10 @@
       margin-bottom: 10px;
     }
   }
+  .tags-wrapper {
+    max-width: 90%;
+    margin: auto;
+  }
   .about {
     text-align: center;
     max-width: 480px;
@@ -69,6 +77,10 @@
   .content-box {
     padding: 10px;
   }
+  .tags-wrapper {
+    max-width: 90%;
+    margin: auto;
+  }
   .post {
     width: 98%;
     max-width: 100%;
@@ -89,6 +101,7 @@
       }
     }
   }
+
   .gatsby-highlight {
     max-width: 350px;
     width: 100%;
@@ -97,6 +110,10 @@
 }
 
 @media only screen and (max-width: 380px) {
+  .tags-wrapper {
+    max-width: 330px;
+    margin: auto;
+  }
   .gatsby-highlight {
     // border: 1px solid red;
     max-width: 300px;

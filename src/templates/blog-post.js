@@ -4,12 +4,14 @@ import Img from 'gatsby-image'
 
 import DefaultLayout from '../components/layout'
 import SEO from '../components/seo'
+// Utilities
+import kebabCase from 'lodash/kebabCase'
 
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const { previous, next } = this.props.pageContext
-
+    const group = this.props.data.allMarkdownRemark.group
     return (
       <DefaultLayout>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
@@ -35,13 +37,16 @@ class BlogPostTemplate extends React.Component {
               </header>
               <div dangerouslySetInnerHTML={{ __html: post.html }} />
               <div className="page-footer">
-                <div className="page-tag">
-                  {post.frontmatter.tags &&
-                    post.frontmatter.tags.map(tag => (
-                      <span className="tag" key={tag}>
-                        # {tag}
-                      </span>
+                <div>
+                  <ul className="tags" style={{ fontSize: '0.8rem' }}>
+                    {group.map(tag => (
+                      <li key={tag.fieldValue}>
+                        <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+                          # {tag.fieldValue} ({tag.totalCount})
+                        </Link>
+                      </li>
                     ))}
+                  </ul>
                 </div>
               </div>
             </div>
@@ -81,6 +86,12 @@ export const pageQuery = graphql`
             }
           }
         }
+      }
+    }
+    allMarkdownRemark(limit: 2000) {
+      group(field: frontmatter___tags) {
+        fieldValue
+        totalCount
       }
     }
   }
