@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import Img from 'gatsby-image'
+import kebabCase from 'lodash/kebabCase'
+import HyvorTalk from 'hyvor-talk-react'
 
 import DefaultLayout from '../components/layout'
 import SEO from '../components/seo'
-// Utilities
-import kebabCase from 'lodash/kebabCase'
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -13,46 +13,56 @@ class BlogPostTemplate extends React.Component {
     const { previous, next } = this.props.pageContext
     const group = this.props.data.allMarkdownRemark.group
     return (
-      <DefaultLayout>
-        <SEO title={post.frontmatter.title} description={post.excerpt} />
-        <article className="article-page">
-          <div className="page-content">
-            {post.frontmatter.img && (
-              <div className="page-cover-image">
-                <figure>
-                  <Img
-                    className="page-image"
-                    key={post.frontmatter.img.childImageSharp.fluid.src}
-                    fluid={post.frontmatter.img.childImageSharp.fluid}
-                  />
-                </figure>
-              </div>
-            )}
-            <div className="wrap-content">
-              <header className="header-page">
-                <h1 className="page-title">{post.frontmatter.title}</h1>
-                <div className="page-date">
-                  <span>{post.frontmatter.date}</span>
+      <div>
+        <DefaultLayout>
+          <SEO title={post.frontmatter.title} description={post.excerpt} />
+          <article className="article-page">
+            <div className="page-content">
+              {post.frontmatter.img && (
+                <div className="page-cover-image">
+                  <figure>
+                    <Img
+                      className="page-image"
+                      key={post.frontmatter.img.childImageSharp.fluid.src}
+                      fluid={post.frontmatter.img.childImageSharp.fluid}
+                    />
+                  </figure>
                 </div>
-              </header>
-              <div dangerouslySetInnerHTML={{ __html: post.html }} />
-              <div className="page-footer">
-                <div>
-                  <ul className="tags" style={{ fontSize: '0.8rem' }}>
-                    {group.map(tag => (
-                      <li key={tag.fieldValue}>
-                        <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-                          # {tag.fieldValue} ({tag.totalCount})
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
+              )}
+              <div className="wrap-content">
+                <header className="header-page">
+                  <h1 className="page-title">{post.frontmatter.title}</h1>
+                  <div className="page-date">
+                    <span>{post.frontmatter.date}</span>
+                  </div>
+                </header>
+                <div dangerouslySetInnerHTML={{ __html: post.html }} />
+                <div className="page-footer">
+                  <div>
+                    <ul className="tags" style={{ fontSize: '0.8rem' }}>
+                      {group.map(tag => (
+                        <li key={tag.fieldValue}>
+                          <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+                            # {tag.fieldValue} ({tag.totalCount})
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </div>
+              <HyvorTalk.Embed
+                websiteId={process.env.HYVOR_WEB_ID}
+                id=""
+                loadMode="scroll"
+              />
             </div>
-          </div>
-        </article>
-      </DefaultLayout>
+          </article>
+        </DefaultLayout>
+        <div className="comment-body">
+          {/* <HyvorTalk.Embed websiteId="217" id="" loadMode="scroll" /> */}
+        </div>
+      </div>
     )
   }
 }
