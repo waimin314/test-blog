@@ -52,16 +52,13 @@ class BlogPostTemplate extends React.Component {
                 </div>
               </div>
               <HyvorTalk.Embed
-                websiteId={process.env.HYVOR_WEB_ID}
+                websiteId={`${process.env.HYVOR_WEB_ID}`}
                 id=""
                 loadMode="scroll"
               />
             </div>
           </article>
         </DefaultLayout>
-        <div className="comment-body">
-          {/* <HyvorTalk.Embed websiteId="217" id="" loadMode="scroll" /> */}
-        </div>
       </div>
     )
   }
