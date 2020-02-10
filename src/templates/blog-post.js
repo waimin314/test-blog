@@ -12,6 +12,7 @@ class BlogPostTemplate extends React.Component {
     const post = this.props.data.markdownRemark
     const { previous, next } = this.props.pageContext
     const group = this.props.data.allMarkdownRemark.group
+    console.log(process.env)
     return (
       <div>
         <DefaultLayout>
@@ -48,7 +49,7 @@ class BlogPostTemplate extends React.Component {
                         </li>
                       ))}
                     </ul>
-                    <div> Value of Test is {`${process.env.TEST}`}</div>
+                    <div> Value of NODE_ENV is {`${process.env.NODE_ENV}`}</div>
                   </div>
                 </div>
               </div>
