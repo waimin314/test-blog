@@ -12,8 +12,6 @@ class BlogPostTemplate extends React.Component {
     const post = this.props.data.markdownRemark
     const { previous, next } = this.props.pageContext
     const group = this.props.data.allMarkdownRemark.group
-    console.log(process.env)
-    console.log(process.env.GATSBY_HYVOR_WEB_ID)
     return (
       <div>
         <DefaultLayout>
@@ -50,7 +48,6 @@ class BlogPostTemplate extends React.Component {
                         </li>
                       ))}
                     </ul>
-                    <div> Value of Test is {`${process.env.GATSBY_TEST}`}</div>
                   </div>
                 </div>
               </div>
