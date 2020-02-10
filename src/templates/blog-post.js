@@ -48,6 +48,7 @@ class BlogPostTemplate extends React.Component {
                         </li>
                       ))}
                     </ul>
+                    <div> Value of Test is {`${process.env.TEST}`}</div>
                   </div>
                 </div>
               </div>
