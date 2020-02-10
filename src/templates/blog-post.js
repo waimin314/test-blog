@@ -13,6 +13,7 @@ class BlogPostTemplate extends React.Component {
     const { previous, next } = this.props.pageContext
     const group = this.props.data.allMarkdownRemark.group
     console.log(process.env)
+    console.log(process.env.GATSBY_HYVOR_WEB_ID)
     return (
       <div>
         <DefaultLayout>
@@ -49,12 +50,12 @@ class BlogPostTemplate extends React.Component {
                         </li>
                       ))}
                     </ul>
-                    <div> Value of NODE_ENV is {`${process.env.NODE_ENV}`}</div>
+                    <div> Value of Test is {`${process.env.GATSBY_TEST}`}</div>
                   </div>
                 </div>
               </div>
               <HyvorTalk.Embed
-                websiteId={`${process.env.HYVOR_WEB_ID}`}
+                websiteId={`${process.env.GATSBY_HYVOR_WEB_ID}`}
                 id=""
                 loadMode="scroll"
               />
