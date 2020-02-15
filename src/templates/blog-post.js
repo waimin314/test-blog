@@ -52,7 +52,7 @@ class BlogPostTemplate extends React.Component {
                 </div>
               </div>
               <HyvorTalk.Embed
-                websiteId={`${process.env.HYVOR_WEB_ID}`}
+                websiteId={`${process.env.GATSBY_HYVOR_WEB_ID}`}
                 id=""
                 loadMode="scroll"
               />
