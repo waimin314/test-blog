@@ -23,7 +23,7 @@ constructor(props) {
 
 Notice that we need to add **this** keyword in front of **state**. The state is part of the component. Using it without **this** will cause error as it is not part of the **Constructor** scope.
 
-For our random numbers, we will need non-repeated numbers from 1 to 27. I will not go into details about how to do that. It deserves it's own blog post. I will link it here once I manage to write it up. For now you may check out this [post by Mike Bostock](https://bost.ocks.org/mike/shuffle/). That's where I learnt about this technique. Basically, we will generate 27 numbers in the order first then shuffle the numbers. Let's dive in :)
+For our random numbers, we will need non-repeated numbers from 1 to 27. I will not go into details about how to do that. It deserves it's own blog post. ~~I will link it here once I manage to write it up. For now you may check out this [post by Mike Bostock](https://bost.ocks.org/mike/shuffle/). That's where I learnt about this technique.~~ It's done. Check it out [here](./../Generate_unique_randoms/) Basically, we will generate 27 numbers in the order first then shuffle the numbers. Let's dive in :)
 
 First declare a global variable for total number of cards. We should be able to change the total number of cards as I am worried 9 rows might be too long for phone screens. Might have to reduce it to 21 cards. When that happens we can simply change the global variable and it should not affect how the App works. Go ahead and declare it outside the class component.
 
@@ -66,7 +66,7 @@ Go to the browser of your React App page. Open up the Developer Tools window (so
 
 ![Populated 27 numbers](console_log_27_num.png)
 
-Let's add the main ingredient. Don't worry if you don't understand the shuffle portion of the code. I promise I will write a blog post about it soon. But if you don't understand how I populated the numbers this tutorial series is not for you. I am afraid you will need to know basic React and Web dev (HTML, CSS, JavaScript) to follow this tutorial series.
+Let's add the main ingredient. Don't worry if you don't understand the shuffle portion of the code. ~~I promise I will write a blog post about it soon.~~ I have written it [here](./../Generate_unique_randoms/) But if you don't understand how I populated the numbers this tutorial series is not for you. I am afraid you will need to know basic React and Web dev (HTML, CSS, JavaScript) to follow this tutorial series.
 
 ```js
 getRandNumArray = () => {
