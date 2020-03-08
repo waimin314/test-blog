@@ -5,7 +5,7 @@ require('dotenv').config({
 module.exports = {
   siteMetadata: {
     title: `Wai Min's Blog`,
-    description: `I am a Software Engineer learning front-end development. This website serves as my portfolio as well as my personal blog`,
+    description: `I am a Software Engineer learning front-end development. This website serves as my portfolio as well as my technical blog`,
     author: `Wai Min`,
     siteUrl: `https://waimin.me`,
     social: {
@@ -58,11 +58,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `flexible-gatsby-starter`,
-        short_name: `flexible-gatsby`,
+        name: `Wai Min's blog`,
+        short_name: `Wai Min's blog`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#1aaddb`,
+        theme_color: `#1aaddb`,
         display: `minimal-ui`,
         icon: `./static/myAvatar.png`, // This path is relative to the root of the site.
       },
