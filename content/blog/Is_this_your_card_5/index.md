@@ -21,7 +21,6 @@ We will be using **div**s as buttons and they will be placed under each columns.
 I want the buttons section and the cards section to be separated from the cards.
 
 ```html
-
 <div className="grid-container">{this.renderGrid()}</div>
 // highlight-start
 <div className="buttons-container">
@@ -108,3 +107,5 @@ Not great, getting better. We just need some styling for the buttons. Most of th
 ![Final buttons](./final_buttons.png).
 
 Alright, I am happy with this result. I am aware that even though the positioning is solid for now the aesthetic doesn't look great. Don't worry. We will be beautifying the final product at the end. It's better to get functionality working well first and then beautify it later. That's it for today. I hope you enjoyed the tutorial :)
+
+_Title Photo by_ <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@cliffordgatewood?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Clifford Photography"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Clifford Photography</span></a> _on Unsplash_
