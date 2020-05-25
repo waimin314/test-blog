@@ -7,7 +7,7 @@ fig-caption:
 tags: [Review, True Wireless earbuds]
 ---
 
-#### Intro
+## Intro
 
 **TL;DR** : I don't like earpiece that enters deep into the ear canal. I am looking for TWS that does not do that. **Oppo Enco Free** seems to fit my need. Or is it?
 
