@@ -26,9 +26,14 @@ h1 {
 }
 
 img {
-  max-width: 100%;
+  max-width: 500px;
+  max-height: 500px;
   vertical-align: middle;
   display: inline-block;
+}
+
+picture > img {
+  max-width: 100%;
 }
 
 img + em {
