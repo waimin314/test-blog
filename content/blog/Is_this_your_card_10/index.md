@@ -26,7 +26,7 @@ If you face an issue related to "TypeError [ERR_INVALID_ARG_TYPE]:", you can fix
 After installing, import the library to `App.js` to use it.
 
 ```jsx
-import FlipMove from "react-flip-move";
+import FlipMove from 'react-flip-move'
 ```
 
 To use it we can wrap `FlipMove` around our `Card` grid as we can see from the github page of the library.
@@ -57,9 +57,9 @@ renderGrid = () => {
     return (
       // highlight-next-line
       <Card key={num} number={num} />
-    );
-  });
-};
+    )
+  })
+}
 ```
 
 Why I changed from `key={i}` to `key={num}`? That's because using `i or (index)` as `key` when mapping an array is a bad practice. Let me elaborate.
