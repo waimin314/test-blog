@@ -9,6 +9,8 @@ tags: [React, Is this your card] # add tag
 
 ### Overview
 
+The live project is available at [My Github Page](https://waimin314.github.io/is_this_your_card/) and the source code at [Github](https://github.com/waimin314/is_this_your_card).
+
 As part of my learning React journey, I plan to create a card guessing that blew my mind when I was young. I will start with just plain React (Vanilla react as some would call it), and make use of advanced libraries/features as I go. For example, I will not be using Redux or React hooks in the beginning but I will use it when the state management gets too complicated. The reason for doing that is to learn React from the ground up. Sure I could start using Redux staright from the beginning but I would like to have a good understanding of how React state works. I believe I need to know the underlying architecture in order to become proficient in a language.
 
 ### Skill Requirement
